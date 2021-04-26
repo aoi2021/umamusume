@@ -1,0 +1,35 @@
+user_input = st.text_input("Search", '')
+data_load_state = st.text('Loading data...')
+
+
+
+targets = list(df.target.unique())
+selected_targets = st.multiselect('select targets', targets, default=targets)
+df = df[df.target.isin(selected_targets)]
+
+st.dataframe(df)
+
+
+
+
+
+
+
+
+
+
+
+
+dfmerge2 = pd.merge(df, dfmerge, how='left', on='‹£‘ˆ–¼')
+st.dataframe(dfmerge2)
+
+
+
+dfmerge3 = dfmerge2[dfmerge2['ğŒ'].isnull()].fillna('')
+
+
+
+st.dataframe(dfmerge3.sort_values(by=["ƒtƒ@ƒ“”"], ascending=False))
+
+
+
